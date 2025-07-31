@@ -1,0 +1,90 @@
+ScreenManager:
+    id: screen_manager
+    LoginScreen:
+        name: 'login'
+    RegisterScreen:
+        name: 'register'
+    DashboardScreen:
+        name: 'dashboard'
+
+<LoginScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+        Label:
+            text: 'Connexion'
+            font_size: 30
+            size_hint_y: 0.2
+        TextInput:
+            id: email
+            hint_text: 'Email'
+            multiline: False
+        TextInput:
+            id: password
+            hint_text: 'Mot de passe'
+            multiline: False
+            password: True
+        Button:
+            text: 'Se connecter'
+            on_press: root.login(email.text, password.text)
+        Button:
+            text: 'Créer un compte'
+            on_press: root.manager.current = 'register'
+        Label:
+            id: error
+            text: ''
+            color: 1, 0, 0, 1
+            size_hint_y: 0.2
+
+<RegisterScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+        Label:
+            text: 'Inscription'
+            font_size: 30
+            size_hint_y: 0.2
+        TextInput:
+            id: email
+            hint_text: 'Email'
+            multiline: False
+        TextInput:
+            id: password
+            hint_text: 'Mot de passe'
+            multiline: False
+            password: True
+        Button:
+            text: 'S\'inscrire'
+            on_press: root.register(email.text, password.text)
+        Button:
+            text: 'Retour à la connexion'
+            on_press: root.manager.current = 'login'
+        Label:
+            id: error
+            text: ''
+            color: 1, 0, 0, 1
+            size_hint_y: 0.2
+
+<DashboardScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+        Label:
+            text: 'Tableau de bord - Capteurs'
+            font_size: 30
+            size_hint_y: 0.2
+        ScrollView:
+            GridLayout:
+                id: sensor_data
+                cols: 2
+                row_force_default: True
+                row_default_height: 40
+                size_hint_y: None
+                height: self.minimum_height
+        Button:
+            text: 'Déconnexion'
+            size_hint_y: 0.2
+            on_press: root.logout()
