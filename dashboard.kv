@@ -1,0 +1,119 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Label:
+        text: 'INDUSTRIE 4.0'
+        font_size: 30
+        bold: True
+        halign: 'center'
+
+    Label:
+        text: 'Dashboard'
+        font_size: 20
+        halign: 'center'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 10
+        padding: 5
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            size_hint_x: 0.5
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 5
+                Label:
+                    text: 'Temperature (°C)'
+                    size_hint_x: 0.7
+                Label:
+                    text: '25.5'
+                    size_hint_x: 0.3
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 5
+                Label:
+                    text: 'Humidity (%)'
+                    size_hint_x: 0.7
+                Label:
+                    text: '95'
+                    size_hint_x: 0.3
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 5
+                Label:
+                    text: 'Gas Level (ppm)'
+                    size_hint_x: 0.7
+                Label:
+                    text: '30'
+                    size_hint_x: 0.3
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            size_hint_x: 0.5
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 5
+                Label:
+                    text: 'Flame'
+                    size_hint_x: 0.7
+                Label:
+                    text: '40'
+                    size_hint_x: 0.3
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 5
+                Label:
+                    text: 'Vibration defectives'
+                    size_hint_x: 0.7
+                Label:
+                    text: 'False'
+                    size_hint_x: 0.3
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 5
+                Label:
+                    text: 'consommation dénergie (kW)'
+                    size_hint_x: 0.7
+                Label:
+                    text: '100'
+                    size_hint_x: 0.3
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 5
+        padding: 5
+
+        Label:
+            text: '3'
+            size_hint_x: 0.5
+
+        Label:
+            text: '30'
+            size_hint_x: 0.5
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 10
+        padding: 5
+        size_hint_y: 0.1
+
+        Button:
+            text: 'Settings'
+            size_hint_x: 0.33
+        Button:
+            text: 'Gear'
+            size_hint_x: 0.33
+        Button:
+            text: 'Profile'
+            size_hint_x: 0.34
